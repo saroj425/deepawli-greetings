@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sect{
+    position: relative;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 0 10px;
+    
+}
+
+.box{
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: #111;
+}
+
+ 
+
+.box:nth-child(odd):before{
+    content: '. Happy Diwali .';
+}
+.box:nth-child(even):after{
+    content: '2023';
+    filter: hue-rotate(180deg);
+}
+.box.animate{
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0,
+    0 0 20px #0f0,
+    0 0 50px #0f0;
+}

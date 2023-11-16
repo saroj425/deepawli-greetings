@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <section class="sect">
+
+    </section>
+    <script>
+        for(let i=0; i<=300;i++){
+            let box = document.createElement("div");
+            box.classList.add("box");
+            box.style.filter = `hue-rotate(${i*10}deg)`;
+            document.querySelector(".sect").appendChild(box);
+        }
+        function animatebox(){
+            let boxes = document.querySelectorAll('.box');
+            let num = Math.floor(Math.random()*boxes.length)
+            boxes[num].classList.toggle('animate')
+        }
+        setInterval(animatebox,1000)
+    </script>
+</body>
+</html>
